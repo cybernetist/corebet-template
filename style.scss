@@ -1,0 +1,545 @@
+@import "./scss/formalize";
+@import "./scss/variable";
+@import "./scss/mixin";
+
+@media only screen and (min-width: 600px) {
+  #wrapper {
+    width: 860px;
+    margin: auto;
+  }
+  .contf1 {
+    margin-left: 57px;
+    margin-right: 57px;
+    padding-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .button-group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .navbar-nav{
+    @include center;
+  }
+  .contf1 {
+    margin-left: 17px;
+    margin-right: 17px;
+  }
+  .news .card-content {
+    margin-left: 10px;
+}
+}
+#wrapper {
+  background: #f3f4f7;
+}
+.navbar {
+  background: $white;
+  z-index: 11;
+}
+header {
+  border-bottom: 1px solid #e1e7eb;
+  height: 135px;
+  background: $white;
+}
+.content {
+  background-color: #f3f4f7;
+}
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 50%;
+}
+
+.form__field {
+  font-family: $open-sans;
+  width: 100%;
+  border: 0;
+  border-bottom: 3px solid #3d2fb7;
+  outline: 0;
+  font-size: 14px;
+  color: #282728;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+  &::placeholder {
+    color: transparent;
+  }
+
+  &:placeholder-shown ~ .form__label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    font-family: $open-sans;
+    cursor: text;
+    top: 20px;
+    color: #282728;
+  }
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: $gray;
+  font-family: $open-sans;
+}
+
+.form__field:focus {
+  ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 10px;
+
+    font-weight: 700;
+    font-family: $open-sans;
+  }
+  font-family: $open-sans;
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-color: #3d2fb7;
+  border-image-slice: 1;
+}
+/* reset input */
+.form__field {
+  &:required,
+  &:invalid {
+    box-shadow: none;
+  }
+}
+
+.login-btn {
+  width: 91px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: $core-blue;
+  color: $white;
+}
+
+.register-btn {
+  width: 130px;
+  height: 50px;
+  box-shadow: 0 12px 14px rgba(0, 206, 107, 0.15);
+  border-radius: 25px;
+  background-color: $core-green;
+  background-image: linear-gradient(to top, #10cb71 0%, #12dc7b 100%);
+  color: $white;
+  font-family: $lato;
+  font-size: 16px;
+  @include center;
+  svg {
+    margin-right: 12px;
+  }
+}
+.button-group {
+  @include center;
+}
+.populer-match {
+  padding-top: 55px;
+  display: flex;
+  .live {
+    width: 64px;
+    height: 39px;
+    box-shadow: 0 12px 14px rgba(0, 206, 107, 0.15);
+    border-radius: 19px;
+    background-color: $core-green;
+    @include center;
+    p {
+      font-size: 16px;
+      font-weight: 900;
+      color: $white;
+      font-family: $lato;
+      line-height: 20px;
+      text-transform: uppercase;
+    }
+  }
+  .match-title {
+    margin-right: auto;
+  }
+  .match-arrow {
+    margin-left: auto;
+    .arrow-right {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 13px 0 13px 19px;
+      border-color: transparent transparent transparent #556385;
+    }
+    .arrow-left {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 13px 19px 13px 0;
+      border-color: transparent #556385 transparent transparent;
+      margin-right: 12px;
+    }
+  }
+}
+#title {
+  color: #061d59;
+  font-family: $lato;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+}
+#title-gray {
+  font-family: $lato;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #b7bbc3;
+}
+
+.card-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 42px;
+
+  .card {
+    width: 364px;
+    height: 281px;
+    box-shadow: 0 15px 30px rgba(54, 55, 59, 0.05);
+    border-radius: 15px;
+    border: none;
+    background-color: #ffffff;
+    .team-logo {
+      display: flex;
+      margin-right: auto;
+      .team-logo-left {
+        @include center;
+        width: 60px;
+        height: 61px;
+        border-radius: 250px;
+        border: 1px solid #e6ebef;
+        z-index: 1;
+      }
+      .team-logo-right {
+        @include center;
+        width: 60px;
+        height: 61px;
+        border-radius: 250px;
+        box-shadow: 0 0 25px rgba(63, 66, 75, 0.1);
+        background-color: $white;
+        margin-left: -8px;
+        z-index: 2;
+      }
+    }
+    .half {
+      display: flex;
+      .half-box {
+        @include center;
+        width: 74px;
+        height: 31px;
+        box-shadow: 0 9px 25px rgba(63, 66, 75, 0.1);
+        border-radius: 10px;
+        background-color: $white;
+        color: #7f8893;
+        font-family: $open-sans;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin-right: 9px;
+      }
+      .half-number {
+        color: #556385;
+        font-family: $open-sans;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 26px;
+      }
+    }
+    .league-name {
+      margin-top: 40px;
+      color: #7f8893;
+      font-family: $open-sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    .team-name {
+      width: 100%;
+
+      th,
+      td {
+        color: #556385;
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 26px;
+      }
+    }
+    .rate-box-area {
+      margin-top: 22px;
+      margin-right: 10px;
+      margin-left: 10px;
+      .rate-box {
+        @include center;
+        width: 75px;
+        margin-right: 10px;
+        height: 51px;
+        border-radius: 10px;
+        border: 1px solid #edeff5;
+        background-color: #fbfbfd;
+        color: #556385;
+        font-family: $open-sans;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+      }
+    }
+  }
+}
+.casino {
+ 
+  border-radius: 15px;
+  border: 1px solid #e1e7eb;
+  background-color: #ffffff;
+
+  
+.parent {
+  display: grid;
+  grid-template-columns: 2.2fr repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  margin-top: 35px;
+  }
+  
+
+
+  .div1 { grid-area: 1 / 1 / 3 / 2; }
+  .div2 { grid-area: 1 / 2 / 2 / 3; }
+  .div3 { grid-area: 1 / 3 / 2 / 5; }
+  .div4 { grid-area: 1 / 5 / 2 / 6; }
+  .div5 { grid-area: 2 / 2 / 3 / 3; }
+  .div6 { grid-area: 2 / 3 / 3 / 4; }
+  .div7 { grid-area: 2 / 4 / 3 / 5; }
+  .div8 { grid-area: 2 / 5 / 3 / 6; }
+}
+.triangle-top-right {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 7px 7px 0;
+  border-color: transparent #32d083 transparent transparent;
+}
+.triangle-bottom-right {
+  position: absolute;
+  top: 35px;
+  left: 52px;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 7px 7px;
+  border-color: transparent transparent #d75050 transparent;
+}
+
+.news {
+  background: $white;
+  height: auto;
+
+  .card-content{
+      height: 470px;
+      margin-left: 45px;
+  }
+.news-title{
+    padding: 55px 55px 0px 55px;
+}
+  .card {
+    width: 363px;
+    height: 401px;
+    border-radius: 15px;
+    border: 1px solid #e1e7eb !important;
+    background-color: #ffffff;
+  }
+  .card-img {
+    padding: 15px;
+    border-radius: 20px;
+    height: 230px;
+  }
+  .card-date {
+    @include center;
+    width: 55px;
+    padding: 12px 0px;
+    box-shadow: 0 10px 20px rgba(29, 55, 122, 0.25);
+    border-radius: 10px;
+    background-color: #ffffff;
+    background-image: linear-gradient(to top, #061d59 0%, #34509a 100%);
+    position: absolute;
+    top: 46%;
+    left: 75%;
+    p {
+      width: 23px;
+      height: 30px;
+      color: $white;
+      font-family: $open-sans;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: center;
+    }
+  }
+  .card-body {
+    margin-top: -25px;
+    .text-muted {
+        align-items: center;
+      h6 {
+        color: #b7bac3;
+        font-family: $open-sans;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        text-transform: uppercase;
+        letter-spacing: 0.65px;
+      }
+    }
+  }
+  .card-title{
+      margin-top: 14px;
+    color: #061d59;
+    font-family: $lato;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.09px;
+  }
+  .card-text{
+    margin-top: 13px;
+    color: #556385;
+    font-family: $open-sans;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+  }
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #e1e7eb transparent;
+  }
+  
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: 10px; left:-100px;
+    top: 100px;
+    height: 6px;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+    width: 12px !important;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    margin-bottom: 10px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: #e1e7eb;
+  }
+}
+
+
+  .grid-container{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-columns: 240px 102px 102px 102px;
+     
+  }
+  @media (min-width: 600px) {
+    .grid-container { grid-template-columns: repeat(2, 1fr); }
+  }
+ 
+
+    
+
+    .table-board{
+     
+      border-radius: 15px;
+  border: 1px solid #e1e7eb;
+  background-color: #ffffff;
+
+  .dropdown-toggle::after {
+    color: #b7bac3;
+    margin-left: 50px;
+}
+a#dropdownMenuLink {
+  text-decoration: none;
+  color: #061d59;
+  font-family: $lato;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.table thead th {
+  color: #b7bac3;
+  font-family: $lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 15px;
+  border-top: 1px solid #edeff5;
+  
+}
+
+.table td, .table th {
+  color: #556385;
+  font-family: $lato;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  border-top: none;
+  border-bottom: 1px solid #edeff5;
+  
+}
+.team-icon{
+  @include center;
+  width: 36px;
+height: 36px;
+border-radius: 30px;
+border: 1px solid #e4e6ed;
+background-color: #ffffff;
+}
+#show-all{
+  @include center;
+  margin: 18px;
+  color: #12dc7b;
+font-family: $lato;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+}
+    }
+
+footer{
+  
+  @include center;
+  flex-direction: column;
+  
+  background-color: #b7bac3;
+  span{
+    color: #fff;
+font-family: $open-sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+margin: 30px;
+  }
+  p{
+    color: #000;
+font-family: $open-sans;
+font-size: 14px;
+font-weight: 400;
+line-height: 22px;
+  }
+}

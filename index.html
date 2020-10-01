@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="ml-auto">
+                    <img class="img-fluid" src="img/logo.png">
+                </div>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <div class="form__group field mr-2">
+                            <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                            <label for="name" class="form__label">Username</label>
+
+                        </div>
+                        <div class="form__group field">
+                            <input type="input" class="form__field" placeholder="Name" name="name" id='name' required />
+                            <label for="name" class="form__label">Password</label>
+
+                        </div>
+
+
+                    </ul>
+                    <div class="button-group">
+                        <button type="button" class="login-btn mr-2">Login</button>
+                        <button type="button" class="register-btn">
+                            <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-person-plus"
+                                fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M8 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm6 5c0 1-1 1-1 1H1s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C9.516 10.68 8.289 10 6 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10zM13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                            </svg>
+                            Register</button>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+        <div class="contf1">
+<!--POPULER MATCH SECTİON START-->
+            <div class="populer-match">
+                <div class="match-title d-flex align-items-center">
+                    <div class="live mr-2">
+                        <p>LIVE</p>
+                    </div>
+                    <h3 id="title">Popular Matches</h3>
+                </div>
+                <div class="match-arrow">
+                    <span class="arrow-left"></span>
+                    <span class="arrow-right"></span>
+                </div>
+
+
+            </div>
+            <div class="card-area d-flex">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex align-items-center">
+                                    <div class="team-logo ">
+                                        <div class="team-logo-left">
+                                            <img class="img-fluid" src="img/mnc-united.png">
+                                        </div>
+                                        <div class="team-logo-right">
+                                            <img class="img-fluid" src="img/watford.png">
+                                        </div>
+                                    </div>
+                                    <div class="half">
+                                        <span class="half-box">
+                                            1st half
+                                        </span>
+                                        <span class="half-number">43’</span>
+                                    </div>
+                                </div>
+                                <h6 class="league-name">Premier League</h6>
+                                <table class="team-name">
+
+                                    <tr>
+                                        <td>Manchester United</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Watford</td>
+                                        <td>2</td>
+                                    </tr>
+
+                                </table>
+                                <div class="row rate-box-area">
+                                    <div class="col rate-box" style="border: 1px solid #90f3c3;
+                                      background-color: #effff7; color: #32d083;"><span
+                                            class="triangle-top-right"></span>1.28</div>
+                                    <div class="col rate-box" style="border: 1px solid #edbfbf;
+                                    background-color: #ffe7e7; color: #d75050;"><span
+                                            class="triangle-bottom-right"></span>3.14</div>
+                                    <div class="col rate-box">2.16</div>
+                                    <div class="col rate-box" style="background:#f6f8fe; border:none;">+48</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex align-items-center">
+                                    <div class="team-logo ">
+                                        <div class="team-logo-left">
+                                            <img class="img-fluid" src="img/newcastle.png">
+                                        </div>
+                                        <div class="team-logo-right">
+                                            <img class="img-fluid" src="img/everton.png">
+                                        </div>
+                                    </div>
+                                    <div class="half">
+                                        <span class="half-box">
+                                            2nd half
+                                        </span>
+                                        <span class="half-number">64’</span>
+                                    </div>
+                                </div>
+                                <h6 class="league-name">Premier League</h6>
+                                <table class="team-name">
+
+                                    <tr>
+                                        <td>Newcastle United</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Everton</td>
+                                        <td>2</td>
+                                    </tr>
+
+                                </table>
+                                <div class="row rate-box-area">
+                                    <div class="col rate-box">1.35</div>
+                                    <div class="col rate-box">2.10</div>
+                                    <div class="col rate-box">2.80</div>
+                                    <div class="col rate-box" style="background:#f6f8fe; border:none;">+48</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!--POPULER MATCH SECTİON END-->
+<!-- CSS GRİD -->
+            <div class="casino mt-5">
+                <div class="contf1">
+                    <div class="mt-5">
+                        <div class="casino-title d-flex align-items-center">
+                            <h3 id="title" class="mr-2">Casino</h3>
+                            <h3 id="title-gray">Populer Games</h3>
+                        </div>
+                        <div class="search-games">
+                            <span class="arrow-left"></span>
+                            <span class="arrow-right"></span>
+                        </div>
+                    </div>
+                    <div class="parent">
+                        <div class="div1">
+                            <img class="img-fluid" src="img/casino1.png">
+                        </div>
+                        <div class="div2">
+                            <img class="img-fluid" src="img/casino2.png">
+                        </div>
+                        <div class="div3">
+                            <img class="img-fluid" src="img/casino4.png">
+                        </div>
+                        <div class="div4">
+                            <img class="img-fluid" src="img/casino3.png">
+                        </div>
+                        <div class="div5">
+                            <img class="img-fluid" src="img/casino6.png">
+                        </div>
+                        <div class="div6">
+                            <img class="img-fluid" src="img/casino5.png">
+                        </div>
+                        <div class="div7">
+                            <img class="img-fluid" src="img/casino7.png">
+                        </div>
+                        <div class="div8">
+                            <img class="img-fluid" src="img/casino8.png">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+          
+        </div>
+        <!-- CSS GRİD -->  
+ <!--NEWS SECTİON START-->
+        <div class="orderf1">
+            <div class="news mt-5">
+                <div class="news-title d-flex align-items-center my-5">
+                    <h3 id="title" class="mr-2">News</h3>
+                    <h3 id="title-gray">Current Sports news</h3>
+                </div>
+                <div class="card-content d-flex flex-row flex-nowrap overflow-auto">
+                    <div class="card card-block mx-2" style="min-width: 363px;">
+                        <div class="card">
+                            <img class="card-img" src="img/news1.png" alt="İCE HOCKEY">
+                            <div class="card-date">
+                                <p>26 Oct</p>
+                            </div>
+
+                            <div class="card-body">
+                                <small class="text-muted cat d-flex">
+                                    <img class="mr-2" style="width:16px; height:16px;" src="img/soccer-ball_icon.png">
+                                    <h6>İCE HOCKEY</h6>
+                                </small>
+                                <h4 class="card-title">Will Phoenix’s MLS expansion bid rise abo- ve the others project
+                                    system ?</h4>
+
+                                <p class="card-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia deserunt mollit anim id est laborum.</p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card card-block mx-2" style="min-width: 363px;">
+                        <div class="card">
+                            <img class="card-img" src="img/news2.png" alt="İCE HOCKEY">
+                            <div class="card-date">
+                                <p>25 Oct</p>
+                            </div>
+
+                            <div class="card-body">
+                                <small class="text-muted cat d-flex">
+                                    <img class="mr-2" style="width:16px; height:16px;" src="img/soccer-ball_icon.png">
+                                    <h6>FOOTBALL</h6>
+                                </small>
+                                <h4 class="card-title">Clemson topples Alabama on last-second touchdown for title</h4>
+
+                                <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+                                    consectetur, adipisci velit, sed quia non numquam eius...</p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="card card-block mx-2" style="min-width: 363px;">
+                        <div class="card">
+                            <img class="card-img" src="img/news1.png" alt="İCE HOCKEY">
+                            <div class="card-date">
+                                <p>26 Oct</p>
+                            </div>
+
+                            <div class="card-body">
+                                <small class="text-muted cat d-flex">
+                                    <img class="mr-2" style="width:16px; height:16px;" src="img/soccer-ball_icon.png">
+                                    <h6>İCE HOCKEY</h6>
+                                </small>
+                                <h4 class="card-title">Will Phoenix’s MLS expansion bid rise abo- ve the others project
+                                    system ?</h4>
+
+                                <p class="card-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                                    officia deserunt mollit anim id est laborum.</p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+ <!--NEWS SECTİON END--> 
+        <div class="contf1">
+            <div class="table-board my-5">
+                <div style="margin: 0 20px;">
+                    <div class="d-flex mt-5">
+                        <div class="table-board-title d-flex align-items-center">
+                            <div class="dropdown">
+                                <img class="img-fluid" src="img/italia.png">
+                                <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Italia Seria A
+                                </a>
+                              
+                               
+                              </div>
+                            
+                        </div>
+                        <h3 id="title-gray" style="margin-left: auto;">Score Board</h3>
+                    </div>
+                   
+                    <table class="table mt-3">
+                        <thead>
+                          <tr>
+                            <th class="col-md-12" scope="col-9">Team</th>
+                            <th class="col-md-1" scope="col">O</th>
+                            <th class="col-md-1" scope="col">P</th>
+                            <th class="col-md-1" scope="col">AV</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th class="d-flex align-items-center" scope="row"><div class="team-icon"><img class="img-flud" src="img/juventus.png"></div><span class="ml-3">Juventus</span></th>
+                            <td>8</td>
+                            <td>21</td>
+                            <td>+8</td>
+                          </tr>
+                          <tr>
+                            <th class="d-flex align-items-center" scope="row"><div class="team-icon"><img class="img-flud" src="img/inter.png"></div><span class="ml-3">Inter</span></th>
+                            <td>8</td>
+                            <td>21</td>
+                            <td>+8</td>
+                          </tr>
+                          <tr>
+                            <th class="d-flex align-items-center" scope="row"><div class="team-icon"><img class="img-flud" src="img/atalanta.png"></div><span class="ml-3">Atalanta</span></th>
+                            <td>8</td>
+                            <td>21</td>
+                            <td>+8</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <a id="show-all" href="#">Show All</a>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <span>Copyright 2020 Corebet</span>
+            <p>Bu kısmı görüp kodladıysan dikkatlisin demektir, bunun da sana artı bir puan katacağından emin olabilirsin.</p>
+        </footer>
+    </div>
+
+
+    
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
